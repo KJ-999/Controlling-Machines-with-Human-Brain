@@ -9,19 +9,18 @@ School of Electronic Engineering, Kumoh National Institute of Technology, Gumi 3
 
 #
 
-In BCI research, our aim is clear: enhance algorithmic consistency across subjects by addressing the variance in brain signals. Our solution, "**Whitening Transform**" or **BCICW**, precedes Eigen Face Analysis (EFA) and Linear Discriminant Analysis (LDA) using EEG data from channels C3, Cz, C5, and trials from nine subjects, helps uniform classification.
+In BCI research, our aim is clear: enhance algorithmic consistency across subjects by addressing the variance in brain signals. Our solution, "**Whitening Transform**" or [BCICW](https://www.mdpi.com/1424-8220/22/16/6042), precedes **Eigen Face Analysis (EFA)** and **Linear Discriminant Analysis (LDA)** using EEG data from channels C3, Cz, C5, and trials from nine subjects, helps uniform classification.
 
 <p align="center">
 The components of the BCICW model
 </p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/KJ-999/Controlling-Machines-with-Human-Brain/main/Assets/Workflow_BCI.webp?token=GHSAT0AAAAAACOLUMH73RO22Z3N6STBHVQMZOSHMMQ" alt="The components of the proposed BCICW model" width="400"/>
+<img src="https://raw.githubusercontent.com/KJ-999/Controlling-Machines-with-Human-Brain/main/Assets/Workflow_BCI.webp?token=GHSAT0AAAAAACOLUMH7RMFHSR7Q5HDTYFDWZOSJHQA" alt="The components of the proposed BCICW model" width="400"/>
 </p>
 
-## About BCICW : 
-* Whitening Technique (BCICW) is a preprocessing step where we use Gram–Schmidt Orthogonalization to de-correlate the mixed signal data i.e. to minimize the variance in accuracy among subjects. 
-* Whitening transform is aimed to provide a unit variance and a minimum covariance for the given random data due to which it 
-minimizes the dependency between experimental participants or subjects which is an essential key factor to solve classification problems.
+## About [BCICW](https://www.mdpi.com/1424-8220/22/16/6042) : 
+* Whitening Technique [(BCICW)](https://www.mdpi.com/1424-8220/22/16/6042) is a preprocessing step where we use Gram–Schmidt Orthogonalization to de-correlate the mixed signal data i.e. to minimize the variance in accuracy among subjects. 
+* [Whitening Transform](https://www.mdpi.com/1424-8220/22/16/6042) is aimed to provide a unit variance and a minimum covariance for the given random data due to which it minimizes the dependency between experimental participants or subjects which is an essential key factor to solve classification problems.
 
 <p align="center">
 <img src="https://github.com/KJ-999/Controlling-Machines-with-Human-Brain/blob/main/Assets/Whitening.png" alt="Covariance matrix for Whitening Transform" width="700"/>
@@ -31,9 +30,9 @@ minimizes the dependency between experimental participants or subjects which is 
 * Because of whitening in channel direction, the independent eigenface for each class is unique and distinguishable. In addition, the Euclidean distance between the coefficients of left and right classes has been increased. Those contributions result in improved accuracy and a reduced variance.
 
 ##
-The [Automated_BCICW_EFA_LDA](https://github.com/KJ-999/Controlling-Machines-with-Human-Brain/blob/main/Automated_BCICW_EFA_LDA.ipynb) loads the data using pickle and apply two approaches : 
-1. In first approach we applied EFA & LDA without applying the Whitening technique on each subject. Calculated the accuracy for each subject and variance in accuracy among subjects to compare with the second approach.
-2. Next we applied EFA & LDA with Whitening Technique on each subject and again calculated accuracy and variance in accuracy among subjects.
+The [Automated_BCICW_EFA_LDA.py](https://github.com/KJ-999/Controlling-Machines-with-Human-Brain/blob/main/Automated_BCICW_EFA_LDA.ipynb) loads the data using pickle and apply two approaches : 
+1. In first approach we applied **EFA** & **LDA** **without** applying the [Whitening Technique](https://www.mdpi.com/1424-8220/22/16/6042) on each subject. Calculated the accuracy for each subject and variance in accuracy among subjects to compare with the second approach.
+2. Next we applied **EFA & LDA with** [Whitening Technique](https://www.mdpi.com/1424-8220/22/16/6042) on each subject and again calculated accuracy and variance in accuracy among subjects.
 
 <p align="center">
 The accuracies for 9 subjects are : 
